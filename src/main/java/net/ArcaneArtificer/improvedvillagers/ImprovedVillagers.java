@@ -1,4 +1,4 @@
-package net.AcraneArtificer.improvedvillagers;
+package net.ArcaneArtificer.improvedvillagers;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Block;
