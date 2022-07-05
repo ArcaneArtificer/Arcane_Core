@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "improvedvillagers:end_tanzanite_ore"
+  },
+  "result": {
+    "item": "improvedvillagers:end_tanzanite",
+    "count": 2
+  },
+  "experience": 2,
+  "cookingtime": 150
+}

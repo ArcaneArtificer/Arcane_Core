@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "improvedvillagers:nether_beryl_block"
+    }
+  ],
+  "result": {
+    "item": "improvedvillagers:nether_beryl",
+    "count": 9
+  }
+}

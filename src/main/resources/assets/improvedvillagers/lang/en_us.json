@@ -1,4 +1,12 @@
 {
-  "item.mod_turturial.nether_beryl": "Nether Beryl",
-  "item.mod_turturial.end_tanzinite": "End Tanzinite"
+  "item.improvedvillagers.nether_beryl": "Nether Beryl",
+  "item.improvedvillagers.end_tanzanite": "End Tanzanite",
+
+  "block.improvedvillagers.nether_beryl_block": "Nether Beryl Block",
+  "block.improvedvillagers.end_tanzanite_block": "End Tanzanite Block",
+  "block.improvedvillagers.nether_beryl_ore_nether": "Nether Beryl Nether Ore",
+  "block.improvedvillagers.nether_beryl_ore_end": "Nether Beryl End Ore",
+  "block.improvedvillagers.end_tanzanite_ore": "End Tanzanite Ore",
+
+  "itemgroup.improvedvillagerstab": "Improved Villagers"
 }

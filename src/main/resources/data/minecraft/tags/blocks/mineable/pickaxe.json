@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "improvedvillagers:nether_beryl_block",
+    "improvedvillagers:end_tanzanite_block",
+    "improvedvillagers:nether_beryl_ore_nether",
+    "improvedvillagers:nether_beryl_ore_end",
+    "improvedvillagers:end_tanzanite_ore"
+  ]
+}
