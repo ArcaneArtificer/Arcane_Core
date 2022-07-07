@@ -3,6 +3,7 @@ package net.ArcaneArtificer.improvedvillagers;
 import com.mojang.logging.LogUtils;
 import net.ArcaneArtificer.improvedvillagers.block.Gem_and_Ore_Blocks;
 import net.ArcaneArtificer.improvedvillagers.item.Gems;
+import net.ArcaneArtificer.improvedvillagers.villager.ModVillagers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -28,15 +29,17 @@ public class ImprovedVillagers
         Gems.register(eventBus);
         Gem_and_Ore_Blocks.register(eventBus);
 
+        ModVillagers.register(eventBus);
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        event.enqueueWork( () -> {
+            ModVillagers.registerPOIs();
+        });
     }
 
 }

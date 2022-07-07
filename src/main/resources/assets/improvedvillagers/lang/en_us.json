@@ -8,5 +8,7 @@
   "block.improvedvillagers.nether_beryl_ore_end": "Nether Beryl End Ore",
   "block.improvedvillagers.end_tanzanite_ore": "End Tanzanite Ore",
 
+  "entity.minecraft.villager.improvedvillagers.wizard": "Wizard",
+
   "itemgroup.improvedvillagerstab": "Improved Villagers"
 }
