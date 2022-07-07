@@ -17,6 +17,7 @@ public class ImprovedVillagersCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Integer> NETHER_BERYL_END_VEINS_PER_CHUNK;
     public static final ForgeConfigSpec.ConfigValue<Integer> END_TANZANITE_VEIN_SIZE;
     public static final ForgeConfigSpec.ConfigValue<Integer> END_TANZANITE_VEINS_PER_CHUNK;
+    public static final ForgeConfigSpec.ConfigValue<Double> PIGLIN_WORKSTATION_BARTERING_RATE;
 
     static {
         BUILDER.push("Configs");
@@ -32,6 +33,7 @@ public class ImprovedVillagersCommonConfigs {
         NETHER_BERYL_END_VEINS_PER_CHUNK = BUILDER.comment("Nether Beryl End Veins Per Chunk").defineInRange("End Nether Beryl Veins Per Chunk", 6, 2, 12);
         END_TANZANITE_VEIN_SIZE = BUILDER.comment("End Tanzanite Vein Size").defineInRange("End Nether Beryl Vein Size", 8, 2, 20);
         END_TANZANITE_VEINS_PER_CHUNK = BUILDER.comment("End Tanzanite Veins Per Chunk").defineInRange("End Nether Beryl Veins Per Chunk", 8, 2, 12);
+        PIGLIN_WORKSTATION_BARTERING_RATE = BUILDER.comment("Percent chance to get villager trading post in addition to current bartering item").defineInRange("Piglin Bartering For Trading Post Percent", 0.01, 0.0, 0.1);
 
         BUILDER.pop();
         SPEC = BUILDER.build();

@@ -2,12 +2,16 @@ package net.ArcaneArtificer.improvedvillagers;
 
 import com.mojang.logging.LogUtils;
 import net.ArcaneArtificer.improvedvillagers.block.Gem_and_Ore_Blocks;
+import net.ArcaneArtificer.improvedvillagers.config.ImprovedVillagersClientConfigs;
+import net.ArcaneArtificer.improvedvillagers.config.ImprovedVillagersCommonConfigs;
 import net.ArcaneArtificer.improvedvillagers.item.Gems;
 import net.ArcaneArtificer.improvedvillagers.villager.ModVillagers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -31,8 +35,12 @@ public class ImprovedVillagers
 
         ModVillagers.register(eventBus);
 
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ImprovedVillagersClientConfigs.SPEC, "improvedvillagers-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ImprovedVillagersCommonConfigs.SPEC, "improvedvillagers-common.toml");
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
     }
 
     private void setup(final FMLCommonSetupEvent event)
