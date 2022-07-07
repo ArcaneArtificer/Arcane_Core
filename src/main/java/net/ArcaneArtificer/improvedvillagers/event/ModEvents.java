@@ -88,10 +88,10 @@ public class ModEvents {
 
             // Villager level 2 trades
             trades.get(2).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.GOLD_BLOCK, ThreadLocalRandom.current().nextInt(1, 4)), new ItemStack(Items.IRON_CHESTPLATE, 10),
+                    new ItemStack(Items.GOLD_BLOCK, ThreadLocalRandom.current().nextInt(1, 4)), new ItemStack(Items.IRON_CHESTPLATE, 1),
                     10, 8, 0.02F));
             trades.get(2).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.DIAMOND_BLOCK, ThreadLocalRandom.current().nextInt(1, 4)), new ItemStack(Items.IRON_LEGGINGS, 10),
+                    new ItemStack(Items.DIAMOND_BLOCK, ThreadLocalRandom.current().nextInt(1, 4)), new ItemStack(Items.IRON_LEGGINGS, 1),
                     10, 8, 0.02F));
 
             // Villager level 3 trades
