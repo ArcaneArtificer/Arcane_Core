@@ -2,6 +2,7 @@ package net.ArcaneArtificer.improvedvillagers.villager;
 
 import com.google.common.collect.ImmutableSet;
 import net.ArcaneArtificer.improvedvillagers.ImprovedVillagers;
+import net.ArcaneArtificer.improvedvillagers.block.Workstation_Blocks;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -25,16 +26,34 @@ public class ModVillagers {
                     PoiType.getBlockStates(Blocks.ENCHANTING_TABLE),
                     1, 1)); // Number of villagers, search range (default 1 except bells, which is 6)
 
+    public static final RegistryObject<PoiType> LAPIDARY_POI = POI_TYPES.register("lapidary_poi",
+            () -> new PoiType("lapidary_poi",
+                    PoiType.getBlockStates(Workstation_Blocks.LAPIDARY.get()),
+                    1, 1));
+
     public static final RegistryObject<VillagerProfession> WIZARD =
             VILLAGER_PROFESSIONS.register("wizard",
                     () -> new VillagerProfession("wizard",
                             ENCHANTING_TABLE_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                             SoundEvents.VILLAGER_WORK_LIBRARIAN));
 
+    public static final RegistryObject<VillagerProfession> JEWELER =
+            VILLAGER_PROFESSIONS.register("jeweler",
+                    () -> new VillagerProfession("jeweler",
+                            LAPIDARY_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+                            SoundEvents.VILLAGER_WORK_ARMORER));
+
     public static void registerPOIs() {
         try {
             ObfuscationReflectionHelper.findMethod(PoiType.class,
                     "registerBlockStates", PoiType.class).invoke(null, ENCHANTING_TABLE_POI.get());
+        } catch (InvocationTargetException | IllegalAccessException exception) {
+            exception.printStackTrace();
+        }
+
+        try {
+            ObfuscationReflectionHelper.findMethod(PoiType.class,
+                    "registerBlockStates", PoiType.class).invoke(null, LAPIDARY_POI.get());
         } catch (InvocationTargetException | IllegalAccessException exception) {
             exception.printStackTrace();
         }

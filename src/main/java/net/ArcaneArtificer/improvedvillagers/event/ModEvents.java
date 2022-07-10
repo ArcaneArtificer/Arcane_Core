@@ -117,6 +117,46 @@ public class ModEvents {
             trades.get(5).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Gem_and_Ore_Blocks.END_TANZANITE_BLOCK.get(), 1), new ItemStack(Items.COAL, ThreadLocalRandom.current().nextInt(5, 20)),
                     10, 8, 0.02F));
+        } else if (event.getType() == ModVillagers.JEWELER.get()){
+            // Villager level 1 trades
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, ThreadLocalRandom.current().nextInt(5, 10)), new ItemStack(Items.COAL_BLOCK, 10),
+                    10, 2, 0.02F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.COAL, ThreadLocalRandom.current().nextInt(20, 40)), new ItemStack(Items.LAPIS_BLOCK, ThreadLocalRandom.current().nextInt(2, 5)),
+                    10, 4, 0.02F));
+
+            // Villager level 2 trades
+            trades.get(2).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.GOLD_BLOCK, ThreadLocalRandom.current().nextInt(1, 4)), new ItemStack(Items.IRON_CHESTPLATE, 1),
+                    10, 8, 0.02F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.DIAMOND_BLOCK, ThreadLocalRandom.current().nextInt(1, 4)), new ItemStack(Items.IRON_LEGGINGS, 1),
+                    10, 8, 0.02F));
+
+            // Villager level 3 trades
+            trades.get(3).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.LAPIS_BLOCK, ThreadLocalRandom.current().nextInt(1, 4)), new ItemStack(Items.COAL_BLOCK, 10),
+                    10, 8, 0.02F));
+            trades.get(3).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.LAPIS_LAZULI, 1), new ItemStack(Items.COAL, ThreadLocalRandom.current().nextInt(5, 20)),
+                    10, 8, 0.02F));
+
+            // Villager level 4 trades
+            trades.get(4).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Gem_and_Ore_Blocks.NETHER_BERYL_BLOCK.get(), ThreadLocalRandom.current().nextInt(1, 4)), new ItemStack(Items.COAL_BLOCK, 10),
+                    10, 8, 0.02F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Gem_and_Ore_Blocks.NETHER_BERYL_BLOCK.get(), 1), new ItemStack(Items.COAL, ThreadLocalRandom.current().nextInt(5, 20)),
+                    10, 8, 0.02F));
+
+            // Villager level 5 trades
+            trades.get(5).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Gem_and_Ore_Blocks.END_TANZANITE_BLOCK.get(), ThreadLocalRandom.current().nextInt(1, 4)), new ItemStack(Items.COAL_BLOCK, 10),
+                    10, 8, 0.02F));
+            trades.get(5).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Gem_and_Ore_Blocks.END_TANZANITE_BLOCK.get(), 1), new ItemStack(Items.COAL, ThreadLocalRandom.current().nextInt(5, 20)),
+                    10, 8, 0.02F));
         }
     }
 }
