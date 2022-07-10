@@ -13,10 +13,10 @@ public class Gems {
             DeferredRegister.create(ForgeRegistries.ITEMS, ImprovedVillagers.MOD_ID);
 
     public static final RegistryObject<Item> NETHER_BERYL = ITEMS.register("nether_beryl",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.IMPROVED_VILLAGERS)));
 
     public static final RegistryObject<Item> END_TANZANITE = ITEMS.register("end_tanzanite",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.IMPROVED_VILLAGERS)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

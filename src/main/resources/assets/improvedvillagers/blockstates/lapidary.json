@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model":  "improvedvillagers:block/lapidary", "y":  180},
+    "facing=east": { "model":  "improvedvillagers:block/lapidary", "y":  270},
+    "facing=south": { "model":  "improvedvillagers:block/lapidary", "y":  0},
+    "facing=west": { "model":  "improvedvillagers:block/lapidary", "y":  90}
+  }
+}
