@@ -129,7 +129,7 @@ public class LapidaryEntity extends BlockEntity implements MenuProvider {
 
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, LapidaryEntity pEntity) {
         if(hasRecipe(pEntity)) {
-            if (pEntity.progress < pEntity.maxProgress) {
+            if (pEntity.progress <= pEntity.maxProgress) {
                 pEntity.progress++;
             }
             setChanged(pLevel, pPos, pState);
@@ -152,7 +152,7 @@ public class LapidaryEntity extends BlockEntity implements MenuProvider {
         Optional<LapidaryRecipe> match = level.getRecipeManager().getRecipeFor(
                 LapidaryRecipe.Type.INSTANCE, inventory, level);
 
-        if (match.isPresent() && (entity.itemHandler.getStackInSlot(3).getCount() + match.get().getResultItem().getCount()) < entity.itemHandler.getStackInSlot(3).getMaxStackSize()) {
+        if (match.isPresent() && (outputPossible(entity, match))) {
             entity.itemHandler.extractItem(0, 1, false);
             entity.itemHandler.extractItem(1, 1, false);
             entity.itemHandler.extractItem(2, 1, false);
@@ -179,8 +179,15 @@ public class LapidaryEntity extends BlockEntity implements MenuProvider {
 
     }
 
-    private static boolean hasNotReachedStackLimit(LapidaryEntity entity) {
-        return entity.itemHandler.getStackInSlot(3).getCount() < entity.itemHandler.getStackInSlot(3).getMaxStackSize();
+    private static boolean outputPossible(LapidaryEntity entity, Optional<LapidaryRecipe> match) {
+        boolean stack_check;
+        if (match.isPresent()) {
+            stack_check = (entity.itemHandler.getStackInSlot(3).getCount() + match.get().getResultItem().getCount()) < entity.itemHandler.getStackInSlot(3).getMaxStackSize();
+        } else {
+            stack_check = entity.itemHandler.getStackInSlot(3).getCount() + 1 < entity.itemHandler.getStackInSlot(3).getMaxStackSize();
+        }
+        boolean output_empty = entity.itemHandler.getStackInSlot(3).isEmpty();
+        return stack_check || output_empty;
     }
 
     private void resetProgress() {
