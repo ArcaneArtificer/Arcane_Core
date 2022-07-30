@@ -18,11 +18,13 @@ public class ImprovedVillagersCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Integer> END_TANZANITE_VEIN_SIZE;
     public static final ForgeConfigSpec.ConfigValue<Integer> END_TANZANITE_VEINS_PER_CHUNK;
     public static final ForgeConfigSpec.ConfigValue<Double> PIGLIN_WORKSTATION_BARTERING_RATE;
+    public static final ForgeConfigSpec.ConfigValue<Integer> TRADER_DIFFICULTY;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> MAX_LEVEL_ENCHANTMENTS;
 
     static {
         BUILDER.push("Configs");
 
-        CLEAR_VANILLA_TRADES = BUILDER.comment("Removes vanilla trades from traders.").define("Vanilla Trades", Boolean.FALSE);
+        CLEAR_VANILLA_TRADES = BUILDER.comment("Replaces vanilla trades with more balanced trades (Vanilla traders only).").define("Vanilla Trades", Boolean.FALSE);
         NETHER_BERYL_SMALL_VEIN_SIZE = BUILDER.comment("Nether Beryl Small Vein Size").defineInRange("Small Nether Beryl Vein Size", 4, 2, 10);
         NETHER_BERYL_SMALL_VEINS_PER_CHUNK = BUILDER.comment("Nether Beryl Small Veins Per Chunk").defineInRange("Small Nether Beryl Veins Per Chunk", 6, 2, 12);
         NETHER_BERYL_MEDIUM_VEIN_SIZE = BUILDER.comment("Nether Beryl Medium Vein Size").defineInRange("Medium Nether Beryl Vein Size", 6, 2, 15);
@@ -34,6 +36,8 @@ public class ImprovedVillagersCommonConfigs {
         END_TANZANITE_VEIN_SIZE = BUILDER.comment("End Tanzanite Vein Size").defineInRange("End Nether Beryl Vein Size", 8, 2, 20);
         END_TANZANITE_VEINS_PER_CHUNK = BUILDER.comment("End Tanzanite Veins Per Chunk").defineInRange("End Nether Beryl Veins Per Chunk", 8, 2, 12);
         PIGLIN_WORKSTATION_BARTERING_RATE = BUILDER.comment("Percent chance to get villager trading post in addition to current bartering item").defineInRange("Piglin Bartering For Trading Post Percent", 0.01, 0.0, 0.1);
+        TRADER_DIFFICULTY = BUILDER.comment("Exponential cost scaling from 1-10.  1 is good for casual players, 5 is the intended difficulty, and 10 is good for economy SMPs").defineInRange("Trader Difficulty and Base Costing", 5, 1, 10);
+        MAX_LEVEL_ENCHANTMENTS = BUILDER.comment("Guarantees max level enchants from trading (books and gear).").define("Max Level Enchants", Boolean.FALSE);
 
         BUILDER.pop();
         SPEC = BUILDER.build();

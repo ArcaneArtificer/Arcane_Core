@@ -24,6 +24,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ImprovedVillagers.MOD_ID)
 public class ImprovedVillagers
@@ -55,7 +56,6 @@ public class ImprovedVillagers
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
