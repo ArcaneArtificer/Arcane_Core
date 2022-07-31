@@ -5,10 +5,6 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 
 public class ArcanicEnchant extends Enchantment {
-    /*
-    TODO Need to override the BowItem, CrossbowItem, and TridentItem classes for enchantment functionality
-    TODO Weapons that create projectiles will need to have methods to implement functionality outside the respective item class
-     */
     private final CustomRarity customRarity;
     private final Boolean treasure;
     private final Boolean curse;
