@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "arcanecore:nether_beryl_ore"
+  },
+  "result": {
+    "item": "arcanecore:nether_beryl",
+    "count": 2
+  },
+  "experience": 2,
+  "cookingtime": 150
+}

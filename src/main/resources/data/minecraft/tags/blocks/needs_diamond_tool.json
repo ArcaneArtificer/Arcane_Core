@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "improvedvillagers:nether_beryl_ore_nether",
-    "improvedvillagers:nether_beryl_block"
+    "arcanecore:nether_beryl_ore_nether",
+    "arcanecore:nether_beryl_block"
   ]
 }

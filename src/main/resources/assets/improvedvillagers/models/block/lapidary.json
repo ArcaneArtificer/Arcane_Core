@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "improvedvillagers:block/lapidary_top",
-    "side": "improvedvillagers:block/lapidary_sides"
-  }
-}

@@ -1,0 +1,10 @@
+{
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:gameplay/piglin_bartering"
+    }
+  ],
+  "addition": "arcanecore:nether_beryl_block",
+  "type": "arcanecore:workstation_from_piglin"
+}

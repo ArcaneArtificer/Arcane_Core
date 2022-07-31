@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "improvedvillagers:end_tanzanite_block",
-    "improvedvillagers:nether_beryl_ore_end",
-    "improvedvillagers:end_tanzanite_ore"
+    "arcanecore:end_tanzanite_block",
+    "arcanecore:nether_beryl_ore_end",
+    "arcanecore:end_tanzanite_ore"
   ]
 }

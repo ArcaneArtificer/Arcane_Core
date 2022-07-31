@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "copper_ingot",
+  "ingredient": {
+    "item": "arcanecore:end_tanzanite_ore"
+  },
+  "result": "arcanecore:end_tanzanite",
+  "experience": 1.0,
+  "cookingtime": 300
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "arcanecore:block/lapidary_top",
+    "side": "arcanecore:block/lapidary_sides"
+  }
+}

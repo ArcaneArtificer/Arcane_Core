@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model":  "arcanecore:block/lapidary", "y":  180},
+    "facing=east": { "model":  "arcanecore:block/lapidary", "y":  270},
+    "facing=south": { "model":  "arcanecore:block/lapidary", "y":  0},
+    "facing=west": { "model":  "arcanecore:block/lapidary", "y":  90}
+  }
+}

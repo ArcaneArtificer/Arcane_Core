@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "improvedvillagers:block/end_tanzanite_block"
-  }
-}

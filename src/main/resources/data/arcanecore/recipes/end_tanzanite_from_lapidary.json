@@ -1,0 +1,18 @@
+{
+  "type": "arcanecore:lapidary",
+  "ingredients": [
+    {
+      "item": "arcanecore:nether_beryl_block"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "minecraft:sand"
+    }
+  ],
+  "output": {
+    "item": "arcanecore:end_tanzanite",
+    "count": 2
+  }
+}
