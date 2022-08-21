@@ -52,7 +52,7 @@ public class ArcanicEnchant extends Enchantment {
 
     public ArcanicEnchant.CustomRarity getCustomRarity() {return this.customRarity;}
 
-    public Map<Integer, ArrayList<VillagerProfession>> get_profession_trades() {return this.TRADER_LEVEL_TO_PROFESSION;}
+    public Map<Integer, ArrayList<VillagerProfession>> getProfessionTrades() {return this.TRADER_LEVEL_TO_PROFESSION;}
 
     @Override
     public boolean isTreasureOnly() {return this.treasure;}
