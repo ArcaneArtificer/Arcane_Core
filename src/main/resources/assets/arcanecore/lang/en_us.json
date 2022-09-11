@@ -9,8 +9,5 @@
   "block.arcanecore.end_tanzanite_ore": "End Tanzanite Ore",
   "block.arcanecore.lapidary": "Lapidary",
 
-  "entity.minecraft.villager.arcanecore.wizard": "Wizard",
-  "entity.minecraft.villager.arcanecore.jeweler": "Jeweler",
-
-  "itemGroup.arcanecore": "Improved Villagers"
+  "itemGroup.arcanecore": "Arcane Core"
 }

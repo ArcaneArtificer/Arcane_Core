@@ -13,7 +13,7 @@ public class ArcanicEnchant extends Enchantment {
     private final Boolean treasure;
     private final Boolean curse;
 
-    private final Map<Integer, ArrayList<VillagerProfession>> TRADER_LEVEL_TO_PROFESSION = new HashMap<>();
+    protected final Map<Integer, ArrayList<String>> TRADER_LEVEL_TO_PROFESSION = new HashMap<>();
 
     public ArcanicEnchant(Rarity pRarity, EnchantmentCategory pCategory, EquipmentSlot... pApplicableSlots) {
         this(CustomRarity.COMMON, false, false, pRarity, pCategory, pApplicableSlots);
@@ -34,14 +34,14 @@ public class ArcanicEnchant extends Enchantment {
         customRarity = pCustomRarity;
         treasure = isTreasure;
         curse = isCurse;
-        TRADER_LEVEL_TO_PROFESSION.put(1, new ArrayList<>(List.of(VillagerProfession.LIBRARIAN)));
-        TRADER_LEVEL_TO_PROFESSION.put(2, new ArrayList<>(List.of(VillagerProfession.LIBRARIAN)));
-        TRADER_LEVEL_TO_PROFESSION.put(3, new ArrayList<>(List.of(VillagerProfession.LIBRARIAN)));
-        TRADER_LEVEL_TO_PROFESSION.put(4, new ArrayList<>(List.of(VillagerProfession.LIBRARIAN)));
-        TRADER_LEVEL_TO_PROFESSION.put(5, new ArrayList<>(List.of(VillagerProfession.LIBRARIAN)));
+        TRADER_LEVEL_TO_PROFESSION.put(1, new ArrayList<>(List.of("LIBRARIAN")));
+        TRADER_LEVEL_TO_PROFESSION.put(2, new ArrayList<>(List.of("LIBRARIAN")));
+        TRADER_LEVEL_TO_PROFESSION.put(3, new ArrayList<>(List.of("LIBRARIAN")));
+        TRADER_LEVEL_TO_PROFESSION.put(4, new ArrayList<>(List.of("LIBRARIAN")));
+        TRADER_LEVEL_TO_PROFESSION.put(5, new ArrayList<>(List.of("LIBRARIAN")));
     }
 
-    public ArcanicEnchant(Map<Integer, ArrayList<VillagerProfession>> pTrade_Level_to_Profession, CustomRarity pCustomRarity, boolean isTreasure,
+    public ArcanicEnchant(Map<Integer, ArrayList<String>> pTrade_Level_to_Profession, CustomRarity pCustomRarity, boolean isTreasure,
                           boolean isCurse, Rarity pRarity, EnchantmentCategory pCategory, EquipmentSlot... pApplicableSlots) {
         super(pRarity, pCategory, pApplicableSlots);
         customRarity = pCustomRarity;
@@ -52,7 +52,7 @@ public class ArcanicEnchant extends Enchantment {
 
     public ArcanicEnchant.CustomRarity getCustomRarity() {return this.customRarity;}
 
-    public Map<Integer, ArrayList<VillagerProfession>> getProfessionTrades() {return this.TRADER_LEVEL_TO_PROFESSION;}
+    public Map<Integer, ArrayList<String>> getProfessionTrades() {return this.TRADER_LEVEL_TO_PROFESSION;}
 
     @Override
     public boolean isTreasureOnly() {return this.treasure;}

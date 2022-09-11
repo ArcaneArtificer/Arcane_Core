@@ -36,7 +36,7 @@ public class ArcaneCoreCommonConfigs {
         END_TANZANITE_VEINS_PER_CHUNK = BUILDER.comment("End Tanzanite Veins Per Chunk").defineInRange("End Nether Beryl Veins Per Chunk", 8, 2, 12);
         DIFFICULTY = BUILDER.comment("Difficulty setting.  1 - Casual, 5 - Typical Use, 10 - SMP Balancing").defineInRange("Arcane Mod Difficulty", 5, 1, 10);
 
-        BUILDER.comment("Improved Villager Specific Configs:");
+        BUILDER.comment("Arcane Villager Specific Configs:");
         CLEAR_VANILLA_TRADES = BUILDER.comment("Replaces vanilla trades with more balanced trades.").define("Vanilla Trades", Boolean.FALSE);
         MAX_LEVEL_ENCHANTMENTS = BUILDER.comment("Guarantees max level enchants from trading (books and gear).").define("Max Level Enchants", Boolean.FALSE);
         PIGLIN_WORKSTATION_BARTERING_RATE = BUILDER.comment("Percent chance to get villager trading post in addition to current bartering item").defineInRange("Piglin Bartering For Trading Post Percent", 0.01, 0.0, 0.1);
