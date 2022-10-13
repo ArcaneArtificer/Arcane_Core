@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "improvedvillagers:nether_beryl_block",
-    "improvedvillagers:end_tanzanite_block",
-    "improvedvillagers:nether_beryl_ore_nether",
-    "improvedvillagers:nether_beryl_ore_end",
-    "improvedvillagers:end_tanzanite_ore",
-    "improvedvillagers:lapidary"
+    "arcanecore:nether_beryl_block",
+    "arcanecore:end_tanzanite_block",
+    "arcanecore:nether_beryl_ore_nether",
+    "arcanecore:nether_beryl_ore_end",
+    "arcanecore:end_tanzanite_ore",
+    "arcanecore:lapidary"
   ]
 }
